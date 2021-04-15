@@ -1,6 +1,19 @@
-function compute()
-{
-    p = document.getElementById("principal").value;
-    
+function show_value(x) {
+    document.getElementById("rate_val").innerHTML = x + "%";
 }
-        
+
+function compute() {
+    var Amt = document.getElementById("principal").value;
+    var Rate = document.getElementById("rate").value;
+    var Time = document.getElementById("years").value;
+    var year = new Date().getFullYear() + parseInt(Time);
+    var interest = (Amt * Rate * Time) / 100;
+
+    if (Amt > 0) {
+        document.getElementById("result").innerHTML = "If you deposit <b>" + Amt + "</b> at an interest rate of <b>" + Rate + "%</b> You will receive an amount of <b>" + interest + "</b> in the year <b>" + year + "</b>";
+    } else {
+        alert("Please enter Positive Value for Amount.")
+        document.getElementById("principal").focus()
+    }
+
+}
