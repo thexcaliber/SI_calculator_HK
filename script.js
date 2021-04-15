@@ -1,6 +1,12 @@
+// Shows value of the rate slider
+
 function show_value(x) {
     document.getElementById("rate_val").innerHTML = x + "%";
 }
+
+// Compute function for satisfying all the give conditions and calculating the SI.
+
+
 
 function compute() {
     var Amt = document.getElementById("principal").value;
