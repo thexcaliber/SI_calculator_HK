@@ -16,7 +16,7 @@ function compute() {
     var interest = (Amt * Rate * Time) / 100;
 
     if (Amt > 0) {
-        document.getElementById("result").innerHTML = "If you deposit <b>" + Amt + "</b> at an interest rate of <b>" + Rate + "%</b> You will receive an amount of <b>" + interest + "</b> in the year <b>" + year + "</b>";
+        document.getElementById("result").innerHTML = "If you deposit <b>" + Amt + "</b> at an interest rate of <b>" + Rate + "%</b> You will receive an amount of <b>" + Amt + interest + "</b> in the year <b>" + year + "</b>";
     } else {
         alert("Please enter Positive Value for Amount.")
         document.getElementById("principal").focus()
